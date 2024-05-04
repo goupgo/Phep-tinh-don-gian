@@ -1,0 +1,63 @@
+<MyRoot>:
+
+    num1: num1
+    num2: num2
+    res: res
+
+    spacing: 20
+    padding: 50
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: "Calculation"
+            font_size: 64
+            color: 0.92, 0.45, 0, 1
+        
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: dp(50) 
+
+            TextInput:
+                id: num1
+                hint_text: "Enter number here"
+                multiline: False
+                font_size: 20
+                
+
+            TextInput:
+                id: num2
+                hint_text: "Enter number here"
+                multiline: False
+                font_size: 20
+        
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: dp(50) 
+
+            Button:
+                text: "+"
+                font_size: 24
+                on_press: root.add()
+            
+            Button:
+                text: "-"
+                font_size: 24
+                on_press: root.sub()
+            
+            Button:
+                text: "x"
+                font_size: 24
+                on_press: root.mul()
+            
+            Button:
+                text: ":"
+                font_size: 24
+                on_press: root.div()
+        
+        Label:
+            id: res
+            text: "="
+            font_size: 64
